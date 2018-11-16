@@ -1,7 +1,0 @@
-install.packages("RMySQL")
-install.packages("sqldf")
-library("sqldf")
-acs<-read.table("getdata_data_ss06pid.csv",sep=",",header=TRUE)
-sqldf("select pwgtp1 from acs where AGEP < 50")
-unique(acs$AGEP)
-sqldf("select distinct AGEP from acs")
